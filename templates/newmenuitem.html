@@ -1,0 +1,83 @@
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rammetto+One|Titillium+Web" rel="stylesheet">
+	<title>Item Catalog | Add Menu Item</title>
+</head>
+
+<body>
+<header>
+	<nav class= "navbar navbar-default">
+		<div class="container-fluid">
+			<div class="row">
+				<img src="{{ url_for('static', filename='drink-beer.jpg') }}" class="logo" alt="picture of beer">
+				<h1 class="app">Beer App</h1>
+			</div>
+		</div>
+		<div class="col-xs-8">
+			{%if 'username' not in login %}
+			<button class="btn btn-default"><a href="{{url_for('showLogin')}}">Click Here to Login </a></button>
+			{% else %}
+			<button class="btn btn-default"><a href="{{url_for('gdisconnect')}}">Logout </a></button>
+			{% endif %}
+		</div>
+</header>
+
+<div class = "pane">
+	<h4> Add Item </h4>
+
+<form action="#" method = 'post'>
+
+<dl>
+	<dt>Name:</dt>
+		<dd><input type ='text' size='30' name='name' required></dd>
+    <dt>Description:</dt>
+        <dd><textarea name = 'description' rows='5' cols='40' required></textarea></dd>
+    <dt>Beer Style:</dt>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer1" value="Pale Ales">Pale Ales
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer2" value="IPA">IPA
+			 </label>
+			 	
+		</div>
+		<div class="radio">
+			<label>
+			 	<input type="radio" name="beer" id="beer3" value="Belgian Beers">Belgian Beers
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer4" value="Wheat Beers">Wheat Beers
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer5" value="Porters">Porters
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer6" value="Stouts">Stouts
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="beer" id="beer7" value="Sours">Sours
+			</label>
+		</div>
+
+
+	<input type="submit" class="btn btn-default" value="Create">
+    <a class="btn btn-default" href="{{ url_for('showMenu', beer_id = beer_id) }}">Cancel</a>
+
+</form>
+</div>
+
+</body>

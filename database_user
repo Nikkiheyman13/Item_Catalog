@@ -1,0 +1,45 @@
+database_user
+
+Class User(Base):
+    __tablename__ = 'user'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False)
+    picture = Column(String(250))
+
+class Beer(Base):
+    __tablename__ = 'beer'
+
+    id = Column(Integer, primary_key = True)
+    name = Column(String(80), nullable = False)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'id': self.id,
+            'name': self.name,
+        }
+
+class MenuItem(Base):
+    __tablename__ = 'menu_item'
+
+    name = Column(String(80), nullable = False)
+    description = Column(String(250))
+    id = Column(Integer, primary_key = True)
+    beer_id = Column(Integer, ForeignKey('beer.id'))
+    beer = relationship(Beer)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    user = relationship(User)
+
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'category': self.category.name,
+            'description': self.description,
+            'name': self.name,
+        }

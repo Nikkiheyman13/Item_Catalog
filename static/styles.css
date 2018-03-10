@@ -1,0 +1,126 @@
+header { 
+    border-bottom: 2px solid #eee; 
+    background-color: #A9A9A9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 200px;
+    margin: 48px auto 32px;
+    font-family: 'Titillium Web', sans-serif;
+    background-image: 
+}
+
+p { color:
+     green;
+ }
+
+a {text-decoration: none; 
+    font-size: 1em;
+}
+
+input[type=button] {
+    padding:5px 10px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin: 5px;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin: 5px;
+}
+
+dt {
+    margin: 10px;
+}
+
+dd{
+    padding: 0px;
+}
+
+.header {
+    text-align: center;
+}
+
+.app {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+    font-family: 'Rammetto One', cursive;
+}
+
+.navbar navbar-default{
+    padding-top: 10px;
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: black
+	font-weight: 100;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.pane {
+    padding:20px;
+}
+
+.btn {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin: 5px;
+    text-decoration: none;
+}
+
+.go-home-button {
+    display: block;
+    float: right;
+}
+
+
+.container-fluid { 
+    padding: 5px; 
+    margin: 5px; 
+    border-color: #999999; 
+    background-color: ##696969;
+}
+
+.dt {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 5px;
+}
+
+.radio {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.beer-name {
+    text-align: center;
+    color: coral;
+}
+
